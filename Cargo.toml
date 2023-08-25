@@ -1,0 +1,18 @@
+[package]
+name = "kzg_crash_bin"
+description = "Test case to crash on windows"
+version = "0.1.0"
+authors = ["Mark Mackey <mark@sigmaprime.io>"]
+edition = "2021"
+
+[dependencies]
+#c-kzg = { path = "C:\\c-kzg-4844\\bindings\\rust" }
+c-kzg = { git = "https://github.com/ethDreamer/c-kzg-4844", rev = "50999951b66f530bbdb71100349ae04e71181477" }
+hex = "0.4.2"
+serde_json = "1.0.66"
+rand = "0.8.5"
+serde = "1.0.116"
+
+[profile.release]
+debug = 2
+
